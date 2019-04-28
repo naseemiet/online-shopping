@@ -19,8 +19,17 @@
 
   <title>online Shopping - ${title}</title>
 
+<script>   
+
+window.menu= '${title}';
+</script>
+
   <!-- Bootstrap core CSS -->
   <link href="${css}/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- ---Boot strap readable theme -->
+  
+   <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="${css}/myapp.css" rel="stylesheet">
@@ -29,10 +38,14 @@
 
 <body>
 
+<div  class="wrapper">
+
   <!-- Navigation -->
   <%@include file="./shared/navbar.jsp" %>
 
    <!-- page container as home page-- -->
+   
+   <div class="content">
    
    <c:if test="${userClickHome == true }">
    <%@include file="home.jsp" %>
@@ -48,6 +61,8 @@
    <%@include file="contact.jsp" %>
    </c:if>
    
+   </div>>
+   
  <!-- Footer comes here -->
 		<%@include file="./shared/footer.jsp"%>
   
@@ -56,6 +71,13 @@
   <!-- Bootstrap core JavaScript -->
   <script src="${js}/jquery.js"></script>
   <script src="${js}/bootstrap.min.js"></script>
+  
+  <!-- -self coded javascript- -->
+   <script src="${js}/myapp.js"></script>
+   
+   </div>>
+  
+  
 
 </body>
 
